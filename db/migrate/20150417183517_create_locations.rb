@@ -2,9 +2,9 @@ class CreateLocations < ActiveRecord::Migration
   def change
     create_table :locations do |t|
       t.text :address
-      t.integer :lng
-      t.integer :lat
-
+      t.float :lng
+      t.float :lat
+      t.integer :distance
       t.timestamps null: false
     end
   end

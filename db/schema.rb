@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150417183517) do
     t.text     "address",    limit: 65535
     t.integer  "lng",        limit: 4
     t.integer  "lat",        limit: 4
+    t.integer  "distance",   limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
