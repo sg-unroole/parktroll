@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417183517) do
+ActiveRecord::Schema.define(version: 20150417185011) do
 
   create_table "locations", force: :cascade do |t|
     t.text     "address",    limit: 65535
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20150417183517) do
     t.integer  "distance",   limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.integer  "location_id",            limit: 4
+    t.date     "date_of_infraction"
+    t.time     "time_of_infraction"
+    t.integer  "set_fine_amount",        limit: 4
+    t.string   "infraction_description", limit: 255
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
 end
