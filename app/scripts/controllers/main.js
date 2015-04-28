@@ -68,7 +68,7 @@ angular.module('parktrollApp')
 	    } else {
 	    	modifiedDay = today.getDate();
 	    }
-	    $scope.userData.endTime = today.getFullYear() + '-' + today.getMonth() + '-' + modifiedDay + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + ' ' + today.getTimezoneOffset();
+	    $scope.userData.endTime = today.getFullYear() + '-' + today.getMonth() + '-' + modifiedDay + ' ' + today.getHours() + $scope.parkingLength.hrs + ':' + today.getMinutes() + $scope.parkingLength.min + ':' + today.getSeconds() + ' ' + today.getTimezoneOffset();
 	    $scope.result = $scope.userData.fetchAPI($scope.userData.lat, $scope.userData.lng, $scope.userData.startTime, $scope.userData.endTime);
     };
 
